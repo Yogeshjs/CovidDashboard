@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5{
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+	margin: .5rem 0 0;
+}
+
+.red{
+	color: var(--red);
+}
+
+.blue{
+	color: var(--blue);
+}
+
+.green{
+	color: var(--green);
+}
+
+.black{
+	color: var(--gray);
+}
+
+.main{
+	padding: 30vh 0;
+}
+
+.indicators{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.indicator{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.graph{
+	margin: 1.5rem 0;
+}
+
+.td-box{
+	position: relative;
+}
+
+.downdrop-toggle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	left: -21px;
+	top: 17px;
+	
+}
+
+.downdrop-toggle svg{
+	width: 11px;
+}
+
+.th-light{
+	background: #FFF;
+}
+
+.mg-1{
+	margin-top: 1rem;
+}
+
+.btn-group{
+	display: flex;
+}
+
+.btn-box{
+	flex-basis: 27%;
+}
+
+.btn-box button{
+	width: 150px;
+}
+
+.drop-select{
+	width: 50%;
+}
