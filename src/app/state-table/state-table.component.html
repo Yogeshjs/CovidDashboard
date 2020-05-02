@@ -1,0 +1,40 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>state/UT</th>
+        <th>Confirmed</th>
+        <th>Active</th>
+        <th>Recovered</th>
+        <th>Deceased</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let state of states">
+        
+        <td class="td-box">
+            <span class="downdrop-toggle" (click)="onDistrictClick(state.district)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+          {{state.state}}
+        </td>
+        <td>{{state.confirmed}}</td>
+        <td>{{state.active}}</td>
+        <td>{{state.recovered}}</td>
+        <td>{{state.deaths}}</td>
+       
+      </tr>
+      <tr>
+        <td colspan="5">
+            <app-district-table [districts]="stateDistrict"></app-district-table> 
+        </td>
+         
+    </tr>
+
+      
+    </tbody>
+  </table>
+
+  

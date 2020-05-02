@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>District</th>
+        <th>Confirmed</th>
+        <th>Active</th>
+        <th>Recovered</th>
+        <th>Deceased</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let district of districts">
+        
+        <td class="td-box">
+          {{district.name}}
+        </td>
+        <td>{{district.confirmed}}</td>
+        <td>{{district.active}}</td>
+        <td>{{district.recovered}}</td>
+        <td>{{district.deaths}}</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
