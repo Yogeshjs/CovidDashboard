@@ -1,7 +1,7 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>state/UT</th>
+        <th>State/UT</th>
         <th>Confirmed</th>
         <th>Active</th>
         <th>Recovered</th>
@@ -9,11 +9,11 @@
       </tr>
     </thead>
     <tbody>
-
-      <tr *ngFor="let state of states">
+        <ng-template ngFor let-state [ngForOf]="states" let-i="index">
+      <tr >
         
         <td class="td-box">
-            <span class="downdrop-toggle" (click)="onDistrictClick(state.district)">
+            <span class="downdrop-toggle" [ngClass]="state.rotateClass ? '.rotate-down' : 'rotate-right'" (click)="onDistrictClick(i)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -24,14 +24,15 @@
         <td>{{state.active}}</td>
         <td>{{state.recovered}}</td>
         <td>{{state.deaths}}</td>
-       
+        
       </tr>
-      <tr>
+      <tr *ngIf="state.showToggle" class="district-{{i}}">
         <td colspan="5">
-            <app-district-table [districts]="stateDistrict"></app-district-table> 
+            <app-district-table [districts]="state.district"></app-district-table>
         </td>
          
-    </tr>
+      </tr>
+        </ng-template>
 
       
     </tbody>

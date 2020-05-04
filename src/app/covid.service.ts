@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 interface caseData {
-  case_time_series: Array<object>,
+  
   statewise: Array<{
     confirmed:string, 
     deltaconfirmed:string, 
@@ -10,8 +10,8 @@ interface caseData {
     recovered:string, 
     deltarecovered:string, 
     deaths:string,
-    deltadeaths:string}>,
-  tested: Array<object>
+    deltadeaths:string,
+    state:string}>
 }
 
 
@@ -24,6 +24,10 @@ export class CovidService {
 
   getCaseData(){
     return this.http.get<caseData>('https://api.covid19india.org/data.json');
+  }
+
+  getDistrictData(){
+    return this.http.get('https://api.covid19india.org/state_district_wise.json');
   }
 
 }

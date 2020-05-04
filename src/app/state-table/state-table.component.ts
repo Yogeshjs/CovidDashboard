@@ -25,6 +25,7 @@ export class StateTableComponent implements OnInit {
   stateWise = [];
   states = [];
   stateDistrict;
+  //showToggle : boolean = false;
 
   constructor(private covid: CovidService) { }
 
@@ -63,6 +64,8 @@ export class StateTableComponent implements OnInit {
 				  obj['recovered'] = elm.recovered;
           obj['deaths'] = elm.deaths;
           obj['district'] = this.getDistrictWiseData(districtData, elm.state);
+          obj['showToggle'] = false;
+          obj['rotateClass'] = false;
 
           this.states.push(obj);
       }
@@ -71,8 +74,11 @@ export class StateTableComponent implements OnInit {
     console.log("state and district",this.states);
   }
 
-  onDistrictClick(data){
-    this.stateDistrict = data;
+  onDistrictClick(index){
+    //this.stateDistrict = data;
+    //console.log("show toggle", index);
+    this.states[index].showToggle = !this.states[index].showToggle;
+    this.states[index].rotateClass = !this.states[index].rotateClass;
   }
 
   ngOnInit(): void {

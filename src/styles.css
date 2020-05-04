@@ -61,6 +61,21 @@ h1, h2, h3, h4, h5{
 	left: -21px;
 	top: 17px;
 	
+
+	
+	transition: background 200ms ease-in-out;
+}
+
+.rotate-right{
+	transform: rotate(-90deg);
+}
+
+.rotate-down{
+	transform: rotate(0deg);
+}
+
+.downdrop-toggle:active{
+	background: rgba(0,0,0,0.5);
 }
 
 .downdrop-toggle svg{
@@ -89,4 +104,8 @@ h1, h2, h3, h4, h5{
 
 .drop-select{
 	width: 50%;
+}
+
+.wrap-div{
+	min-width: 100%;
 }
