@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 
 import { ChartsModule } from 'ng2-charts'
-
+import { MatSortModule } from "@angular/material/sort";
 
 import { CovidService } from "./covid.service";
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { CaseIndicatorComponent } from './case-indicator/case-indicator.component';
 import { StateTableComponent } from './state-table/state-table.component';
 import { DistrictTableComponent } from './district-table/district-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { DistrictTableComponent } from './district-table/district-table.componen
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSortModule
    
   ],
   providers: [CovidService],

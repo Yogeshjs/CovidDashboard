@@ -1,11 +1,11 @@
-<table class="table table-striped">
+<table matSort (matSortChange)="sortState($event)" class="table table-striped" >
     <thead>
       <tr>
-        <th>State/UT</th>
-        <th>Confirmed</th>
-        <th>Active</th>
-        <th>Recovered</th>
-        <th>Deceased</th>
+        <th mat-sort-header="state">State/UT</th>
+        <th mat-sort-header="confirmed">Confirmed</th>
+        <th mat-sort-header="active">Active</th>
+        <th mat-sort-header="recovered">Recovered</th>
+        <th mat-sort-header="deaths">Deceased</th>
       </tr>
     </thead>
     <tbody>
