@@ -96,7 +96,7 @@ export class StateTableComponent implements OnInit {
     });
 
     this.states = this.STATES.slice();
-    console.log("state and district",this.states);
+    //console.log("state and district",this.states);
   }
 
   onDistrictClick(index){

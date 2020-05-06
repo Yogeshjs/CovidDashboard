@@ -1,7 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+interface DailyData{
+  dailyconfirmed: string;
+  dailydeceased: string;
+  dailyrecovered: string;
+  date: string;
+  totalconfirmed: string;
+  totaldeceased: string;
+  totalrecovered: string;
+}
+
 interface caseData {
+
+  cases_time_series: DailyData[];
   
   statewise: Array<{
     confirmed:string, 

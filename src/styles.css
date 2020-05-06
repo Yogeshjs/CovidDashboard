@@ -42,6 +42,8 @@ h1, h2, h3, h4, h5{
 
 .graph{
 	margin: 1.5rem 0;
+	width: 100px;
+	height: 75px;
 }
 
 .td-box{
