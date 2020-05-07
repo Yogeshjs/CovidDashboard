@@ -1,0 +1,38 @@
+<div class="mg-1">
+    <select #op class="custom-select drop-select" (change)="changeSateCode(op.value)">
+      <option [value]="state.statecode | lowercase" *ngFor="let state of statesCode">{{state.statename}}</option>
+    </select>
+  </div>
+
+  <div class="mg-1">
+    <div class="charts">
+      <canvas baseChart
+      [datasets]="confirmedChartData"
+      [labels]="ChartLabels"
+      [options]="ChartOptions"
+      [legend]="ChartLegend"
+      [chartType]="ChartType">
+      </canvas>
+      <canvas baseChart
+        [datasets]="activeChartData"
+        [labels]="ChartLabels"
+        [options]="ChartOptions"
+        [legend]="ChartLegend"
+        [chartType]="ChartType"
+      ></canvas>
+      <canvas baseChart
+        [datasets]="recoveredChartData"
+        [labels]="ChartLabels"
+        [options]="ChartOptions"
+        [legend]="ChartLegend"
+        [chartType]="ChartType"
+      ></canvas>
+      <canvas baseChart
+        [datasets]="deceasedChartData"
+        [labels]="ChartLabels"
+        [options]="ChartOptions"
+        [legend]="ChartLegend"
+        [chartType]="ChartType"
+      ></canvas>
+    </div>
+  </div>

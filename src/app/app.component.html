@@ -46,32 +46,8 @@
           <button type="button" class="btn btn-secondary btng">Daily</button>
         </div>
       </div>
-      <div class="mg-1">
-        <select class="custom-select drop-select">
-          <option>Maharashtra</option>
-          <option>Gujarat</option>
-          <option>Delhi</option>
-        </select>
-      </div>
-  
-      <div class="mg-1">
-        <div class="charts">
-          <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartTYpe"
-          ></canvas>
-          <canvas baseChart
-          [datasets]="barChartData"
-          [labels]="barChartLabels"
-          [options]="barChartOptions"
-          [legend]="barChartLegend"
-          [chartType]="barLineChart">
-        </canvas>
-        </div>
-      </div>
+
+    <app-cumulative-chart></app-cumulative-chart>
   
     </div>
   

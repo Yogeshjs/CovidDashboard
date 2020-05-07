@@ -42,4 +42,8 @@ export class CovidService {
     return this.http.get('https://api.covid19india.org/state_district_wise.json');
   }
 
+  getStateChartData(){
+    return this.http.get('https://api.covid19india.org/states_daily.json');
+  }
+
 }

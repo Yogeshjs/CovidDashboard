@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5{
 .indicator{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	align-items: center;
+
 }
 
 .graph{
@@ -112,4 +113,4 @@ h1, h2, h3, h4, h5{
 	min-width: 100%;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

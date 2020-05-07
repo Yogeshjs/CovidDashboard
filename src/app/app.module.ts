@@ -12,6 +12,7 @@ import { CaseIndicatorComponent } from './case-indicator/case-indicator.componen
 import { StateTableComponent } from './state-table/state-table.component';
 import { DistrictTableComponent } from './district-table/district-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CumulativeChartComponent } from './cumulative-chart/cumulative-chart.component';
 
 
 
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     CaseIndicatorComponent,
     StateTableComponent,
-    DistrictTableComponent
+    DistrictTableComponent,
+    CumulativeChartComponent
   ],
   imports: [
     BrowserModule,
