@@ -6,20 +6,25 @@
 
   <div class="mg-1">
     <div class="charts">
-      <canvas baseChart
-      [datasets]="confirmedChartData"
-      [labels]="ChartLabels"
-      [options]="ChartOptions"
-      [legend]="ChartLegend"
-      [chartType]="ChartType">
-      </canvas>
+      <div class="chart-container">
+        <canvas baseChart
+        [datasets]="confirmedChartData"
+        [labels]="ChartLabels"
+        [options]="ChartOptions"
+        [legend]="ChartLegend"
+        [chartType]="ChartType">
+        </canvas>
+      </div>
+      <div class="chart-container">
       <canvas baseChart
         [datasets]="activeChartData"
         [labels]="ChartLabels"
         [options]="ChartOptions"
         [legend]="ChartLegend"
-        [chartType]="ChartType"
-      ></canvas>
+        [chartType]="ChartType">
+      </canvas>
+      </div>
+      <div class="chart-container">
       <canvas baseChart
         [datasets]="recoveredChartData"
         [labels]="ChartLabels"
@@ -27,6 +32,8 @@
         [legend]="ChartLegend"
         [chartType]="ChartType"
       ></canvas>
+    </div>
+    <div class="chart-container">
       <canvas baseChart
         [datasets]="deceasedChartData"
         [labels]="ChartLabels"
@@ -34,5 +41,6 @@
         [legend]="ChartLegend"
         [chartType]="ChartType"
       ></canvas>
+    </div>
     </div>
   </div>

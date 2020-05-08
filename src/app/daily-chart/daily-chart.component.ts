@@ -9,11 +9,11 @@ interface ModelData{
 }
 
 @Component({
-  selector: 'app-cumulative-chart',
-  templateUrl: './cumulative-chart.component.html',
-  styleUrls: ['./cumulative-chart.component.css']
+  selector: 'app-daily-chart',
+  templateUrl: './daily-chart.component.html',
+  styleUrls: ['./daily-chart.component.css']
 })
-export class CumulativeChartComponent implements OnInit {
+export class DailyChartComponent implements OnInit {
 
   stateChartData: ModelData = {
     confirmed:{},
@@ -36,7 +36,8 @@ export class CumulativeChartComponent implements OnInit {
   confirmedChartData = [{
     label: '# Case',
     data:[],
-    fill: false,
+    fill: true,
+    backgroundColor:'#dc3545',
     borderColor: '#dc3545',
     borderWidth: 2,
     pointBackgroundColor: '#dc3545',
@@ -47,7 +48,8 @@ export class CumulativeChartComponent implements OnInit {
   activeChartData = [{
     label: '# Case',
     data:[],
-    fill: false,
+    fill: true,
+    backgroundColor:'#dc3545',
     borderColor: '#dc3545',
     borderWidth: 2,
     pointBackgroundColor: '#dc3545',
@@ -58,7 +60,8 @@ export class CumulativeChartComponent implements OnInit {
   recoveredChartData = [{
     label: '# Case',
     data:[],
-    fill: false,
+    fill: true,
+    backgroundColor:'#dc3545',
     borderColor: '#dc3545',
     borderWidth: 2,
     pointBackgroundColor: '#dc3545',
@@ -69,7 +72,8 @@ export class CumulativeChartComponent implements OnInit {
   deceasedChartData = [{
     label: '# Case',
     data:[],
-    fill: false,
+    fill: true,
+    backgroundColor:'#dc3545',
     borderColor: '#dc3545',
     borderWidth: 2,
     pointBackgroundColor: '#dc3545',
@@ -105,14 +109,15 @@ export class CumulativeChartComponent implements OnInit {
 
   ChartLegend = true;
 
-  ChartType = 'line';
+  ChartType = 'bar';
 
   createChart(){
     // confirmed chart
     this.confirmedChartData = [{
       label: '# Confirmed',
       data: this.stateChartData.confirmed[this.stateCode],
-      fill: false,
+      fill: true,
+      backgroundColor:'#dc3545',
       borderColor: '#dc3545',
       borderWidth: 2,
       pointBackgroundColor: '#dc3545',
@@ -126,7 +131,8 @@ export class CumulativeChartComponent implements OnInit {
     this.activeChartData = [{
       label: '# Active',
       data:this.stateChartData.active[this.stateCode],
-      fill: false,
+      fill: true,
+      backgroundColor:'#007bff',
       borderColor: '#007bff',
       borderWidth: 2,
       pointBackgroundColor: '#007bff',
@@ -138,7 +144,8 @@ export class CumulativeChartComponent implements OnInit {
     this.recoveredChartData = [{
       label: '# Recovered',
       data:this.stateChartData.recovered[this.stateCode],
-      fill: false,
+      fill: true,
+      backgroundColor:'#28a745',
       borderColor: '#28a745',
       borderWidth: 2,
       pointBackgroundColor: '#28a745',
@@ -150,7 +157,8 @@ export class CumulativeChartComponent implements OnInit {
    this.deceasedChartData = [{
       label: '# Deceased',
       data:this.stateChartData.deceased[this.stateCode],
-      fill: false,
+      fill: true,
+      backgroundColor:'#6c757d',
       borderColor: '#6c757d',
       borderWidth: 2,
       pointBackgroundColor: '#6c757d',
@@ -267,8 +275,7 @@ export class CumulativeChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      
-      this.covid.getStateChartData()
+    this.covid.getStateChartData()
       .subscribe(data => {
         this.dailyStateData(data);
       },

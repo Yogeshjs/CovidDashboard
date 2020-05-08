@@ -40,14 +40,15 @@
       <h1 style="text-align: center;">Spread Trends</h1>
       <div class="mg-1 btn-group">
         <div class="btn-box">
-          <button type="button" class="btn btn-secondary btng">Cumulative</button>
+          <button type="button" class="btn btn-secondary btng" routerLink="/cumulative-chart">Cumulative</button>
         </div>
         <div class="btn-box">
-          <button type="button" class="btn btn-secondary btng">Daily</button>
+          <button type="button" class="btn btn-secondary btng" routerLink="/daily-chart">Daily</button>
         </div>
       </div>
 
-    <app-cumulative-chart></app-cumulative-chart>
+    <router-outlet></router-outlet>
+    <!--<app-daily-chart></app-daily-chart>-->
   
     </div>
   

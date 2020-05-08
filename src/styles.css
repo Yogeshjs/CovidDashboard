@@ -112,5 +112,10 @@ h1, h2, h3, h4, h5{
 .wrap-div{
 	min-width: 100%;
 }
+
+.chart-container{
+	margin-bottom: 1rem;
+}
+
 html, body { height: 100%; }
 

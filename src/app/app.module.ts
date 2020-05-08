@@ -13,6 +13,7 @@ import { StateTableComponent } from './state-table/state-table.component';
 import { DistrictTableComponent } from './district-table/district-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CumulativeChartComponent } from './cumulative-chart/cumulative-chart.component';
+import { DailyChartComponent } from './daily-chart/daily-chart.component';
 
 
 
@@ -22,7 +23,8 @@ import { CumulativeChartComponent } from './cumulative-chart/cumulative-chart.co
     CaseIndicatorComponent,
     StateTableComponent,
     DistrictTableComponent,
-    CumulativeChartComponent
+    CumulativeChartComponent,
+    DailyChartComponent
   ],
   imports: [
     BrowserModule,
