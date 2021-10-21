@@ -34,16 +34,28 @@ export class CovidService {
 
   constructor(private http: HttpClient) { }
 
+  // getCaseData(){
+  //   return this.http.get<caseData>('https://api.covid19india.org/data.json');
+  // }
+
   getCaseData(){
-    return this.http.get<caseData>('https://api.covid19india.org/data.json');
+    return this.http.get<caseData>('../assets/data.json');
   }
+
+  // getDistrictData(){
+  //   return this.http.get('https://api.covid19india.org/state_district_wise.json');
+  // }
 
   getDistrictData(){
-    return this.http.get('https://api.covid19india.org/state_district_wise.json');
+    return this.http.get('../assets/state_district_wise.json');
   }
 
+  // getStateChartData(){
+  //   return this.http.get('https://api.covid19india.org/states_daily.json');
+  // }
+
   getStateChartData(){
-    return this.http.get('https://api.covid19india.org/states_daily.json');
+    return this.http.get('../assets/states_daily.json');
   }
 
 }
